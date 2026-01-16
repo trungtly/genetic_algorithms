@@ -81,6 +81,34 @@ from .genetic_algorithm import (
     solve_with_ga
 )
 
+from .exceptions import (
+    GeneticAlgorithmError,
+    ConfigurationError,
+    PopulationError,
+    IndividualError,
+    OperatorError,
+    CrossoverError,
+    MutationError,
+    SelectionError,
+    ConvergenceError,
+    TerminationError,
+    ProblemDefinitionError,
+    ValidationError,
+    validate_rate,
+    validate_positive,
+    validate_non_negative,
+    validate_integer_range
+)
+
+from .logger import (
+    get_logger,
+    set_log_level,
+    enable_debug_logging,
+    disable_logging,
+    add_file_handler,
+    EvolutionLogger
+)
+
 __all__ = [
     # Individual classes
     'Individual',
@@ -144,5 +172,31 @@ __all__ = [
     
     # Main algorithm
     'GeneticAlgorithm',
-    'solve_with_ga'
+    'solve_with_ga',
+
+    # Exceptions
+    'GeneticAlgorithmError',
+    'ConfigurationError',
+    'PopulationError',
+    'IndividualError',
+    'OperatorError',
+    'CrossoverError',
+    'MutationError',
+    'SelectionError',
+    'ConvergenceError',
+    'TerminationError',
+    'ProblemDefinitionError',
+    'ValidationError',
+    'validate_rate',
+    'validate_positive',
+    'validate_non_negative',
+    'validate_integer_range',
+
+    # Logging
+    'get_logger',
+    'set_log_level',
+    'enable_debug_logging',
+    'disable_logging',
+    'add_file_handler',
+    'EvolutionLogger'
 ]
